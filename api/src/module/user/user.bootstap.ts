@@ -1,13 +1,14 @@
-import { Database } from '@tscc/core';
+import { Database, TypedRoutes } from '@tscc/core';
 import { UserRepository } from './user.repository';
 import { UserController } from './user.controller';
 import { v4 as uuidv4 } from 'uuid';
 
+export const route = new TypedRoutes();
 const db = new Database('users', {
   defaultData: [
     {
       id: uuidv4(),
-      user: 'Firstuser',
+      username: 'First User',
       password: 'password',
       email: 'a@mail.com',
     },

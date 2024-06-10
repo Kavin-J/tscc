@@ -8,7 +8,6 @@ export interface DatabaseOptions {
   defaultData: object[];
 }
 
-
 export class Database {
   private databasePath: string;
 
@@ -41,11 +40,14 @@ export class Database {
 
   async update(input: any) {
     const data = await this.readAll();
-    const index = data.findIndex((item) => item.id === input.id);
-    data[index] = {
-      ...data[index],
+    const userId = input.id;
+    const userIndex = data.findIndex((user) => user.id === userId);
+    data[userIndex] = {
+      ...data[userIndex],
       ...input
-    } as any;
+    }
+    
+
     await fs.writeFile(this.databasePath, JSON.stringify(data, null, 2));
   }
 
@@ -55,14 +57,22 @@ export class Database {
     data.splice(index, 1);
     await fs.writeFile(this.databasePath, JSON.stringify(data, null, 2));
   }
+  async removeAll(){
+    
+    await fs.rm(this.databasePath)
+
+  }
 
   async insert(input: any) {
     const data = await this.readAll();
+    const id = uuidv4();
     // Add a new change
     data.push({
       ...input,
-      id: uuidv4()
+      id,
     } as any);
     await fs.writeFile(this.databasePath, JSON.stringify(data, null, 2));
+    const user = await this.read(id);
+    return user;
   }
 }

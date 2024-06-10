@@ -1,8 +1,14 @@
 [
   {
-    "id": "977c3861-41ff-4145-86ab-7acbed492f53",
-    "user": "Firstuser",
+    "username": "Alex Forguson",
     "password": "password",
-    "email": "a@mail.com"
+    "email": "alextheF@mail.com",
+    "id": "fe402f85-33bd-4ae7-bca1-2616ce55a092"
+  },
+  {
+    "username": "Supaporn Ksm",
+    "password": "password",
+    "email": "alextheF@mail.com",
+    "id": "cba45604-4e5f-493c-9b8e-059ca736d562"
   }
 ]
