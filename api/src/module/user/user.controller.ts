@@ -12,9 +12,9 @@ const sampleMiddleware = async (req: Request, res: Response, next: NextFunction)
   
 };
 
-export class UserController extends BaseController {
+export class UserController  /** extends BaseController */ {
   constructor(public userRepository: UserRepository) {
-    super();
+    // super();
   }
 
   getAll = route.get('/').handler(async () => {
