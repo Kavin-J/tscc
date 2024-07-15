@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
-import { BaseResponse } from '../lib/baseResponse';
-import { HttpError } from '../lib/errors';
+import { BaseResponse } from '../baseResponse';
+import { HttpError } from '../errors';
 
 
 export function globalErrorHandler(

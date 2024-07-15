@@ -1,7 +1,6 @@
 import type { NextFunction, Request, Response } from 'express';
 import { UserRepository } from './user.repository';
-import { BaseController } from '@tscc/core';
-import { BaseResponse } from 'core/src/lib/baseResponse';
+import { BaseResponse } from 'core/src/baseResponse';
 import { UserModel } from './user.model';
 import { route } from './user.bootstap';
 import z, { string } from 'zod';

@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
 import z from 'zod';
-import { MaybePromise } from './types';
+import { MaybePromise } from '@tscc/core';
 import { BaseResponse } from './baseResponse';
 import { ValidationError } from './errors';
 import { fromZodError } from 'zod-validation-error';
-import { MiddlewareHandler, RequestHandler } from './router';
+import { MiddlewareHandler, RequestHandler } from '@tscc/core';
 
 export class TypedRoutes {
   get(path: string) {

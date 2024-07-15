@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "reset": "nx reset",
-    "dev": "nx run-many -t serve"
+    "dev": "nx run-many -t serve",
+    "start": "nx serve api --configuration=production"
   },
   "private": true,
   "devDependencies": {
